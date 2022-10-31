@@ -1,6 +1,8 @@
 package com.example.kseromicroservicesecurity.service;
 
 import com.example.kseromicroservicesecurity.entity.Customer;
+import com.example.kseromicroservicesecurity.ksero.resources.wholesaler.CreateWholesalerResource;
+import com.example.kseromicroservicesecurity.ksero.resources.wholesaler.WholesalerResource;
 import org.springframework.stereotype.Service;
 
 
@@ -18,7 +20,12 @@ public class CustomerService {
         System.out.println("Received " + customer);
         this.customerEventsService.publish(customer);
         return customer;
+    }
 
+    public Customer deleted(Customer customer) {
+        System.out.println("Received " + customer);
+        this.customerEventsService.delete(customer);
+        return customer;
     }
 
 }

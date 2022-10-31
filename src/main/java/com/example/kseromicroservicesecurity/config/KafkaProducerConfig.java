@@ -33,6 +33,7 @@ public class KafkaProducerConfig {
         configProps.put(
                 ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
                 JsonSerializer.class);
+        configProps.put(JsonSerializer.TYPE_MAPPINGS,"com.ksero:com.ksero.kafka.events.Event");
         return new DefaultKafkaProducerFactory<>(configProps);
     }
 
