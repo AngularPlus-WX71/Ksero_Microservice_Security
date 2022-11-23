@@ -16,7 +16,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 @Configuration
 public class KafkaProducerConfig {
 
-    private final String bootstrapAddress = "localhost:9092";
+    private final String bootstrapAddress = "ksero.eastus.cloudapp.azure.com:9092";
 
     @Bean
     public ProducerFactory<String, Event<?>> producerFactory() {
