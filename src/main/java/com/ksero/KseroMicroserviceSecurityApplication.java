@@ -6,6 +6,7 @@ import io.swagger.v3.oas.annotations.enums.SecuritySchemeType;
 import io.swagger.v3.oas.annotations.security.SecurityScheme;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SecurityScheme(name="acme", scheme = "bearer",
@@ -13,6 +14,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 @OpenAPIDefinition
 @SpringBootApplication
 @EnableJpaAuditing
+@EnableEurekaClient
 public class KseroMicroserviceSecurityApplication {
 
     public static void main(String[] args) {
